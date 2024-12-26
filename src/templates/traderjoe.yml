@@ -11,6 +11,10 @@ ttl: 300
 
 contractAddresses:
   fuji:
-      routerAddress: '0xb4315e873dBcf96Ffd0acd8EA43f689D8c20fB30'
+      #routerAddress: '0xb4315e873dBcf96Ffd0acd8EA43f689D8c20fB30'
+      routerAddress: '0x18556da13313f3532c54711497a8fedac273220e'
+
   avalanche:
-      routerAddress: '0xb4315e873dBcf96Ffd0acd8EA43f689D8c20fB30'
+      #routerAddress: '0xb4315e873dBcf96Ffd0acd8EA43f689D8c20fB30'
+      routerAddress: '0x18556da13313f3532c54711497a8fedac273220e'
+
