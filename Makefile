@@ -18,7 +18,13 @@ build:
 	yarn build
 
 docker:
-	git clean -xdf && docker build-t rakd/hummingbot-gateway${TAG} -f Dockerfile .
+	git clean -xdf && docker build -t rakd/hummingbot-gateway${TAG} -f Dockerfile .
+	docker tag 	rakd/hummingbot-gateway${TAG} ghcr.io/rakd/hummingbot-gateway${TAG}
 
 dockerpush: docker
-	docker push rakd/hummingbot-gateway
+	docker push rakd/hummingbot-gateway${TAG}
+
+dockerpush2: docker 
+
+	echo $CR_PAT | docker login ghcr.io -u $GUSERNAME --password-stdin
+	docker push ghcr.io/rakd/hummingbot-gateway${TAG}
