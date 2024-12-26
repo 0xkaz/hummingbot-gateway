@@ -25,7 +25,8 @@ ENV INSTALLATION_TYPE=docker
 RUN mkdir -p /home/gateway/conf /home/gateway/logs /home/gateway/db /home/gateway/certs
 
 # Install dependencies and compile
-RUN yarn install --frozen-lockfile
+# RUN yarn install --frozen-lockfile
+RUN yarn install 
 RUN yarn build
 
 # Expose port 15888 - note that docs port is 8080

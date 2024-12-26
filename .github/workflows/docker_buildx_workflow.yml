@@ -1,11 +1,14 @@
 name: Gateway Docker Buildx Workflow 
 
 on:
+  push:
+    branches: [main, master, development, 'feat/lfj-bgr', 'feat/**']
   pull_request:
     types: [closed]
     branches:
       - master
       - development
+      - feat/lfj-bgr
   release:
     types: [published, edited]
 

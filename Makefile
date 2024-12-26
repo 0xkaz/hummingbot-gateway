@@ -18,7 +18,7 @@ build:
 	yarn build
 
 docker:
-	git clean -xdf && docker build --platform linux/amd64 -t rakd/hummingbot-gateway${TAG} -f Dockerfile .
+	git clean -xdf && docker build-t rakd/hummingbot-gateway${TAG} -f Dockerfile .
 
-dockerpush:
+dockerpush: docker
 	docker push rakd/hummingbot-gateway
