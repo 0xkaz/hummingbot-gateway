@@ -1,5 +1,6 @@
 # Set the base image
-FROM node:18.10.0
+# FROM node:18.10.0
+FROM node:22.3.0
 # FROM hummingbot/gateway:latest
 
 # WORKDIR /usr/src/app/
@@ -27,6 +28,7 @@ RUN mkdir -p /home/gateway/conf /home/gateway/logs /home/gateway/db /home/gatewa
 
 # Install dependencies and compile
 RUN yarn install --frozen-lockfile
+# RUN rm yarn.lock
 # RUN yarn install 
 RUN yarn build
 
