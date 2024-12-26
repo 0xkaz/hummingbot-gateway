@@ -1,5 +1,6 @@
 # Set the base image
 FROM node:18.10.0
+# FROM hummingbot/gateway:latest
 
 # WORKDIR /usr/src/app/
 WORKDIR /home/gateway
@@ -25,8 +26,8 @@ ENV INSTALLATION_TYPE=docker
 RUN mkdir -p /home/gateway/conf /home/gateway/logs /home/gateway/db /home/gateway/certs
 
 # Install dependencies and compile
-# RUN yarn install --frozen-lockfile
-RUN yarn install 
+RUN yarn install --frozen-lockfile
+# RUN yarn install 
 RUN yarn build
 
 # Expose port 15888 - note that docs port is 8080
