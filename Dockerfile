@@ -6,6 +6,8 @@ FROM node:22-alpine3.20
 # FROM hummingbot/gateway:latest
 RUN apk update
 RUN apk add git 
+RUN apk add bash
+RUN apk add zsh
 # WORKDIR /usr/src/app/
 WORKDIR /home/gateway
 
