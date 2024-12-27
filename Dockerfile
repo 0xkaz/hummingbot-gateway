@@ -1,8 +1,11 @@
 # Set the base image
 # FROM node:18.10.0
-FROM node:22.3.0
-# FROM hummingbot/gateway:latest
+# FROM node:22.3.0
+FROM node:22-alpine3.20
 
+# FROM hummingbot/gateway:latest
+RUN apk update
+RUN apk add git 
 # WORKDIR /usr/src/app/
 WORKDIR /home/gateway
 
